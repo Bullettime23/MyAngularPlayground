@@ -1,0 +1,9 @@
+@for(book of books; track book.id) {
+<article class="book-item">
+  <p>{{ book.volumeInfo.title }}</p>
+  <span>by {{ book.volumeInfo.authors }}</span>
+  <button type="button" class="data-test" (click)="add.emit(book.id)">
+    Add to collection
+  </button>
+</article>
+}
